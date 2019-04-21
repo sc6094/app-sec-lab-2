@@ -1,0 +1,35 @@
+<html>
+<head>
+</head>
+<body>
+<style type="text/css">
+	table, th, td{
+		border: 1px solid black;
+	}
+</style>
+<h1>Welcome {{username}}</h1> 
+
+
+<table>
+	<th>User</th>
+	<th>DOB</th>
+	<th>SSN</th>
+	<th>Bank Balance</th>
+
+{% for line in accountinfo %}
+	<tr>
+		<td>{{line.username}}</td>
+		<td>{{line.dateofbirth}}</td>
+		<td>{{line.ssn}}</td>
+		<td>{{line.BankBalance}}</td>
+	</tr>
+{% endfor %}
+</table>
+
+<br>
+<a href="/logout">Logout</a>
+
+</body>
+
+
+</html>
